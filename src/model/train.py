@@ -3,11 +3,12 @@
 import argparse
 import glob
 import os
+import numpy as np
 
 import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
-
+from sklearn.model_selection import train_test_split
 
 # define functions
 def main(args):
@@ -72,3 +73,6 @@ if __name__ == "__main__":
     # add space in logs
     print("*" * 60)
     print("\n\n")
+def split_data()
+    X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure','TricepsThickness','SerumInsulin','BMI','DiabetesPedigree','Age']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
